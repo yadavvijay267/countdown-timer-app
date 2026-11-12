@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Countdown Timer &amp; Event Reminder</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <h1>⏳ Countdown Timer</h1>
+  <p class="tagline">Count down to launches, exams and festivals — or count up from a day that mattered.</p>
+</header>
+
+<main>
+  <section class="card add-card">
+    <h2>Add a countdown</h2>
+    <form id="addForm">
+      <label>Event name <input id="eventName" type="text" placeholder="e.g. Diwali 2027" required maxlength="60"></label>
+      <label>Date &amp; time <input id="eventDate" type="datetime-local" required></label>
+      <label>Mode
+        <select id="eventMode">
+          <option value="down">Count down (time left)</option>
+          <option value="up">Count up (time since)</option>
+        </select>
+      </label>
+      <button type="submit" class="primary">＋ Add Countdown</button>
+    </form>
+    <div class="presets">
+      <span>Quick add:</span>
+      <button type="button" data-preset="Diwali 2027" data-date="2027-10-29T00:00">🪔 Diwali 2027</button>
+      <button type="button" data-preset="New Year 2027" data-date="2027-01-01T00:00">🎆 New Year 2027</button>
+      <button type="button" data-preset="Christmas 2026" data-date="2026-12-25T00:00">🎄 Christmas 2026</button>
+    </div>
+    <button id="notifyBtn" class="secondary">🔔 Enable browser reminders</button>
+    <p id="notifyStatus" class="status"></p>
+  </section>
+
+  <section id="timers" class="timers" aria-live="polite"></section>
+  <p id="emptyState" class="empty">No countdowns yet — add one above, or use a quick-add preset.</p>
+</main>
+
+<footer><p>Built by Clamor · Countdowns are saved in your browser (localStorage) · Share any countdown with its link</p></footer>
+<script src="app.js"></script>
+</body>
+</html>

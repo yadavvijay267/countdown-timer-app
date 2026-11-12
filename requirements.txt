@@ -1,0 +1,2 @@
+# No Python dependencies are needed for this project.
+# It is a pure HTML/CSS/JavaScript web app — just open src/index.html in a browser.
