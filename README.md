@@ -43,20 +43,6 @@ python3 -m http.server --directory src 8000
 
 Screenshots live in [`screenshots/`](screenshots/) — see `SCREENSHOTS.md` there for the naming convention.
 
-## Project Structure
-
-```
-countdown-timer-app/
-├── src/
-│   ├── index.html   # add form, presets, timer grid
-│   ├── styles.css   # dark theme, flip animation, timer cards
-│   └── app.js       # timer engine, notifications, share URLs, storage
-├── assets/          # logo.svg
-├── docs/            # ARCHITECTURE.md
-├── tests/           # TESTING.md + validate.py
-└── screenshots/     # SCREENSHOTS.md
-```
-
 ## License
 
 MIT — see [LICENSE](LICENSE). Copyright (c) 2026 Clamor.
